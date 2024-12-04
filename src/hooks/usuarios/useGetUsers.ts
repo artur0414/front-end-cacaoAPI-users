@@ -8,11 +8,10 @@ export const useGetUsers = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        // Solo llamamos a getUsers() si los usuarios no están cargados ya
         if (users.length === 0) {
             getUsers();
         }
-    }, []); // Dependencia vacía significa que se ejecuta solo una vez
+    }, [users.length]); 
     
 
     const getUsers = async () => {
@@ -35,8 +34,7 @@ export const useGetUsers = () => {
 
             setUsers(data);
             setLoading(false);       
-        } catch (error) {
-            console.error(error);
+        } catch {
             setLoading(false);
         }
     }

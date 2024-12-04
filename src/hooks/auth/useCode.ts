@@ -32,9 +32,9 @@ export const useCode = () => {
         setLoading(false);
         return true;
         } catch (err) {
-        setLoading(false);
-        setError("Hubo un error al intentar verificar el código.");
-        return false;
+            setLoading(false);
+            setError((err as Error).message || "Hubo un error al intentar verificar el código.");
+            return false;
         }
     };
     

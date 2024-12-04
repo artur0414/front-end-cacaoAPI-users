@@ -33,14 +33,14 @@ const useAuth = () => {
         setStatus(true);
         setLoading(false);
         setData(() => data);
-      } catch (error) {
+      } catch  {
         router.push("/no-autorizado");
         setStatus(false);
         setLoading(false);
       } 
     };
     verify();
-  }, []);
+  }, [router]);
 
 
   return {status, loading, data};

@@ -8,7 +8,7 @@ export const useRecovery = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     
-    const recovery = async (values: RecoveryRequest): Promise<Boolean> => {
+    const recovery = async (values: RecoveryRequest): Promise<boolean> => {
         setLoading(true);
         setError(null);
     
@@ -33,9 +33,9 @@ export const useRecovery = () => {
         setLoading(false);
         return true;
         } catch (err) {
-        setLoading(false);
-        setError("Hubo un error al intentar restablecer la contraseña.");
-        return false;
+            setLoading(false);
+            setError((err as Error).message || "Hubo un error al intentar recuperar la contraseña.");
+            return false;
         }
     };
     

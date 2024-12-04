@@ -1,7 +1,7 @@
 // Hook to handle the logout process
 
 export function useLogOut()  {
-    const logOut = async (): Promise<Boolean>  => {
+    const logOut = async (): Promise<boolean>  => {
         try {
             const result = await fetch(
                 "https://backend-users-8r0y.onrender.com/logout",
@@ -20,7 +20,7 @@ export function useLogOut()  {
                 return false
             }
               return true;
-        } catch (error) {
+        } catch {
             return false
         }
     }

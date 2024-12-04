@@ -1,12 +1,13 @@
 // Hook to update the user's password
 
+import { UsersProps } from "@/types/userTypes";
 import { useState } from "react";
 
 export const useUpdate = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const update = async (data: any) => {
+    const update = async (data: UsersProps) => {
         try {
             setLoading(true);
             const response =  await fetch ('https://backend-users-8r0y.onrender.com/update-password', {
@@ -31,7 +32,7 @@ export const useUpdate = () => {
         
         } catch (error) {
             setLoading(false);
-            setError('Hubo un error al intentar actualizar la contraseña');
+            setError((error as Error).message || 'Hubo un error al intentar actualizar la contraseña');
             return false;
         }
     }

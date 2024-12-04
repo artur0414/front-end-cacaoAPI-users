@@ -5,7 +5,7 @@
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
-export default function unauthorizedPage() {
+export default function UnauthorizedPage() {
   const router = useRouter();
 
   const handleRedirect = () => {

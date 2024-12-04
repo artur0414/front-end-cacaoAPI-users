@@ -30,7 +30,7 @@ export const useAddUsers = () => {
         }
         catch (err) {
             setLoading(false);
-            setError("Hubo un error al intentar agregar el usuario.");
+            setError((err as Error).message || "Hubo un error al intentar registrar al usuario.");
             return false;
         }
     };

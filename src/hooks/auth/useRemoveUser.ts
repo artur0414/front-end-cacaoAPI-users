@@ -28,7 +28,7 @@ export const useRemoveUser = () => {
             return true;
         } catch (err) {
             setLoading(false);
-            setError("Hubo un error al intentar eliminar al usuario.");
+            setError((err as Error).message || "Hubo un error al intentar eliminar al usuario.");
             return false;
         }
     };

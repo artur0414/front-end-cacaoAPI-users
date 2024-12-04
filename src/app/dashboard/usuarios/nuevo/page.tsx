@@ -4,8 +4,6 @@
 
 import AddUserForm from "@/components/forms/AddUserForm";
 
-export const NuevoPage = () => {
+export default function NuevoPage() {
   return <AddUserForm />;
-};
-
-export default NuevoPage;
+}

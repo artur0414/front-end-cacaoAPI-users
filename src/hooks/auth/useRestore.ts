@@ -30,7 +30,7 @@ export const useRestore = () => {
         }
         catch (err) {
             setLoading(false);
-            setError("Hubo un error al intentar actualizar la contraseña.");
+            setError((err as Error).message || "Hubo un error al intentar restaurar la contraseña.");
             return false;
         }
     };

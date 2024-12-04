@@ -28,9 +28,9 @@ export const Columns: ColumnDef<UsersProps>[] = [
       const user = row.original;
       return (
         <ActionsCell
-          id={user.id}
-          username={user.username}
-          userRole={user.role}
+          id={user.id!}
+          username={user.username!}
+          userRole={user.role!}
         />
       );
     },

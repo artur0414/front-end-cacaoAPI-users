@@ -19,6 +19,8 @@ export interface MessageProps {
     buttonPath ?: string; 
 }
 
+// Update Password
+
 // Delete Alert
 
 export interface DeleteAlertProps {
@@ -29,11 +31,14 @@ export interface DeleteAlertProps {
 // Users Table
 
 export interface UsersProps{
-    nombre: string;
-    role: string;
-    email: string;
-    username: string;
-    id: string;
+    nombre ?: string;
+    role ?: string;
+    email ?: string;
+    username ?: string;
+    id ?: string;
+    password ?: string;
+    newPassword ?: string;
+    repeatedPassword ?: string;
 };
 
 // User Role

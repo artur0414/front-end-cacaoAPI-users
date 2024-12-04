@@ -30,7 +30,11 @@ export const SuccessMessage = ({
               type="button"
               className="bg-custom-blue/60 px-4 py-2 hover:bg-custom-blue/80"
               onClick={() => {
-                buttonPath ? router.push(buttonPath) : window.location.reload();
+                if (buttonPath) {
+                  router.push(buttonPath);
+                } else {
+                  window.location.reload();
+                }
               }}
             >
               {buttonContent}

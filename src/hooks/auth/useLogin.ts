@@ -9,7 +9,7 @@ export const useLogin = () => {
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState<string | null>(null); 
 
-  const login = async (values: LoginRequest): Promise<Boolean> => {
+  const login = async (values: LoginRequest): Promise<boolean> => {
     setLoading(true);
     setError(null);
 
@@ -35,7 +35,7 @@ export const useLogin = () => {
       return true;
     } catch (err) {
       setLoading(false);
-      setError("Hubo un error al intentar iniciar sesión.");
+      setError((err as Error).message || "Hubo un error al intentar iniciar sesión.");
       return false
     }
   };

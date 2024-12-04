@@ -4,7 +4,7 @@ export const useUpdateRole = () => {
   const [error, setError] = useState<string | null>(null);
 
 
-  const updateRole = async (username: string, role: string): Promise<Boolean> => {
+  const updateRole = async (username: string, role: string): Promise<boolean> => {
     setError(null); // Limpiar cualquier error previo
 
     // Cambiar el rol: si es "admin", lo cambiamos a "user" y viceversa.

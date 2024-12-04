@@ -17,7 +17,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useState } from "react";
-import { restoreValidation } from "@/schemas/restoreValidation";
 import { updatePasswordValidation } from "@/schemas/updatePassword";
 import { useUpdate } from "@/hooks/ajustes/useUpdate";
 import UpdatedPasswordModal from "@/components/ui/UpdatedPasswordModal";
@@ -44,7 +43,7 @@ export default function UpdatePassword({
 
   const [showPassword, setShowPassword] = useState(false);
 
-  async function onSubmit(values: z.infer<typeof restoreValidation>) {
+  async function onSubmit(values: z.infer<typeof updatePasswordValidation>) {
     const response = await update(values);
     if (response) {
       setPaswordChanged(true);
