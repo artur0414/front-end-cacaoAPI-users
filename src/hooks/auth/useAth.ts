@@ -19,6 +19,10 @@ const useAuth = () => {
             method: "GET",
             credentials: "include",
             mode: "cors",
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer token'
+            }
           }
         );
 
