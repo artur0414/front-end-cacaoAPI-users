@@ -10,7 +10,7 @@ export const useAddUsers = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch("backend-users.netlify.app/register", {
+            const response = await fetch("https://backend-users-8r0y.onrender.com/register", {
                 method: "POST",
                 credentials: "include",
                 mode: "cors",

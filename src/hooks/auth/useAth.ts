@@ -14,7 +14,7 @@ const useAuth = () => {
     const verify = async () => {
       try {
         const response = await fetch(
-          "backend-users.netlify.app/protected",
+          "https://backend-users-8r0y.onrender.com/protected",
           {
             method: "GET",
             credentials: "include",

@@ -13,7 +13,7 @@ export const useRecovery = () => {
         setError(null);
     
         try {
-        const response = await fetch("backend-users.netlify.app/forgot", {
+        const response = await fetch("https://backend-users-8r0y.onrender.com/forgot", {
             method: "POST",
             credentials: "include",
             mode: "cors",

@@ -11,7 +11,7 @@ export const useRemoveUser = () => {
         setError(null);
 
         try {
-            const response = await fetch(`backend-users.netlify.app/delete/${id}`, {
+            const response = await fetch(`https://backend-users-8r0y.onrender.com/delete/${id}`, {
                 method: "DELETE",
                 credentials: "include",
                 mode: "cors",

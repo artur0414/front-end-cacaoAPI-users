@@ -4,7 +4,7 @@ export function useLogOut()  {
     const logOut = async (): Promise<boolean>  => {
         try {
             const result = await fetch(
-                "backend-users.netlify.app/logout",
+                "https://backend-users-8r0y.onrender.com/logout",
                 {
                   method: "POST",
                   credentials: "include",
