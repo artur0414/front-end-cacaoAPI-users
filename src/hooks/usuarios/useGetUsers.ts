@@ -1,0 +1,45 @@
+
+import { useEffect, useState } from "react";
+
+
+export const useGetUsers = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        // Solo llamamos a getUsers() si los usuarios no están cargados ya
+        if (users.length === 0) {
+            getUsers();
+        }
+    }, []); // Dependencia vacía significa que se ejecuta solo una vez
+    
+
+    const getUsers = async () => {
+        try {
+            setLoading(true);
+            const response = await fetch("https://backend-users-8r0y.onrender.com/getAll", {
+                method: "GET",
+                credentials: "include",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                setLoading(false);
+                return;
+            }
+
+            setUsers(data);
+            setLoading(false);       
+        } catch (error) {
+            console.error(error);
+            setLoading(false);
+        }
+    }
+
+    return { getUsers, loading, users };
+}

@@ -1,17 +1,8 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+// Code: Layout component for the app
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import type { Metadata } from "next";
+import "./globals.css";
+import { lato } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${lato.className} antialiased w-screen h-screen flex justify-center items-center overflow-hidden dark:bg-custom-black`}
       >
         {children}
       </body>
