@@ -11,7 +11,7 @@ export const useUpdateRole = () => {
     const newRole = role === "admin" ? "user" : "admin";
 
     try {
-      const response = await fetch(`https://backend-users-gray.vercel.app/update-role`, {
+      const response = await fetch(`https://backend-users-8r0y.onrender.com/update-role`, {
         method: "PATCH",
         credentials: "include",
         mode: "cors",
