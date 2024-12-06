@@ -14,10 +14,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import LogoutLink from "./logout";
+import { useWindowSize } from "@/hooks/global/useWindowSize";
 
 interface Props {
   displayFullNav: boolean;
   isAdmin: boolean;
+  setDisplay: (value: boolean) => void;
 }
 
 // Map of links to display in the side navigation.
@@ -34,7 +36,19 @@ const links = [
   { name: "Cerrar Sesión", icon: PowerIcon, href: "/auth" },
 ];
 
-export default function NavLinks({ displayFullNav, isAdmin }: Props) {
+export default function NavLinks({
+  displayFullNav,
+  isAdmin,
+  setDisplay,
+}: Props) {
+  const [desktop] = useWindowSize();
+
+  const handleClick = () => {
+    if (!desktop) {
+      setDisplay(false);
+    }
+  };
+
   const pathname = usePathname();
   return (
     <div className="flex flex-col h-[90%]">
@@ -71,6 +85,7 @@ export default function NavLinks({ displayFullNav, isAdmin }: Props) {
             <Link
               key={link.name}
               href={link.href!}
+              onClick={handleClick}
               className={clsx(linkClasses, additionalClass)}
               aria-current={isActive ? "page" : undefined}
               aria-label={link.name}
