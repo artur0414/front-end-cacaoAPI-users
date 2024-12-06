@@ -147,7 +147,7 @@ export default function AddUserForm() {
             </div>
           </form>
           {!isDesktop && (
-            <div className="absolute top-0 right-0">
+            <div className="absolute p-6 top-0 right-0">
               <Button
                 type="button"
                 variant={"ghost"}
