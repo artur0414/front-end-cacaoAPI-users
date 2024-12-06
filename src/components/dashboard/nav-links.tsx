@@ -37,7 +37,7 @@ const links = [
 export default function NavLinks({ displayFullNav, isAdmin }: Props) {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col" style={{ height: "calc(100% - 48px)" }}>
+    <div className="flex flex-col h-[90%]">
       {links
         .filter((link) => !(!isAdmin && link.name === "Usuarios"))
         .map((link) => {

@@ -8,7 +8,7 @@ const Logo = ({ display }: { display: boolean }) => {
   return (
     <div
       className={clsx(
-        "flex  w-full h-[48px] gap-2 items-center rounded-md text-sm font-medium hover:text-custom-blue cursor-pointer",
+        "flex  w-full h-[10%] gap-2 items-center rounded-md text-sm font-medium hover:text-custom-blue cursor-pointer",
         {
           "justify-center": !display,
           "justify-start": display,

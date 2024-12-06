@@ -20,7 +20,7 @@ export default function Ajustes() {
     <Loader sizeParent={true} />
   ) : (
     <>
-      <section className="w-full h-full flex justify-center items-center">
+      <section className="w-full h-full flex justify-center md:items-center py-8">
         <div className="w-full max-w-xl px-4">
           <h2 className="mb-6 text-2xl md:text-3xl">Ajustes</h2>
           <div className="sm:w-max-[300px] w-full max-h-[60vh] bg-white flex flex-col gap-8 py-8 px-4 overflow-y-auto dark:bg-custom-black-2">
