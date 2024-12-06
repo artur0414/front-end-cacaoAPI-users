@@ -37,14 +37,14 @@ const links = [
 export default function NavLinks({ displayFullNav, isAdmin }: Props) {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col" style={{ height: "calc(100% - 48px)" }}>
       {links
         .filter((link) => !(!isAdmin && link.name === "Usuarios"))
         .map((link) => {
           const LinkIcon = link.icon;
           const isActive = pathname === link.href;
           const linkClasses = clsx(
-            "flex h-[48px] gap-2 items-center  p-3 text-sm font-medium hover:bg-custom-blue/10 hover:text-custom-blue cursor-pointer md:p-2 md:px-3 my-1",
+            "flex h-[48px] gap-2 items-center p-3 text-sm font-medium hover:bg-custom-blue/10 hover:text-custom-blue cursor-pointer md:p-2 md:px-3 my-1",
             {
               "bg-custom-blue/20 text-custom-blue": isActive,
               "text-gray-500": !isActive,
