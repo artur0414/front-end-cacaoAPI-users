@@ -51,7 +51,7 @@ export default function UpdatePassword({
   }
 
   return (
-    <div className=" absolute flex items-center justify-center top-0 left-0 w-full h-full bg-white dark:bg-custom-black">
+    <div className=" absolute flex items-center justify-center top-0 left-0 w-full h-full bg-white dark:bg-custom-black z-50">
       <div className="bg-white w-full max-w-[300px] max-h-[90vh] sm:w-[350px] md:w-full md:h-auto md:max-w-[450px] lg:w-full  lg:max-h-[97vh] px-5 py-8 sm:py-10 md:py-12 shadow-lg flex flex-col gap-7 overflow-auto dark:bg-custom-black-2">
         <div className="flex flex-col gap-2 w-full">
           <h3 className="text-2xl px-2">Actualizar Contraseña</h3>

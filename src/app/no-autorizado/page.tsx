@@ -3,11 +3,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import useAuth from "@/hooks/auth/useAth";
 import { useRouter } from "next/navigation";
 
 export default function UnauthorizedPage() {
-  const { data } = useAuth();
   const router = useRouter();
 
   const handleRedirect = () => {
@@ -25,7 +23,6 @@ export default function UnauthorizedPage() {
             </h3>
             <p className="text-sm text-gray-500 dark:text-white">
               Lo sentimos, no tienes permisos para acceder a esta página.
-              {data.error}
             </p>
           </div>
 

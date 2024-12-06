@@ -57,7 +57,7 @@ export default function AddUserForm() {
   };
 
   return (
-    <section className="w-full h-full flex justify-center items-center flex-col">
+    <section className="w-full h-full flex justify-center items-center flex-col z-50">
       <div className=" bg-white w-full max-w-[300px] max-h-[90vh] sm:w-[350px] md:w-full md:h-auto md:max-w-[600px] lg:w-full lg:max-w-[900px] lg:max-h-[97vh] px-5 py-8 sm:py-10 md:py-12 shadow-lg flex flex-col gap-7 overflow-auto dark:bg-custom-black-2">
         <div className="flex flex-col gap-4">
           <h3 className="text-2xl px-2">Agregar usuario</h3>
