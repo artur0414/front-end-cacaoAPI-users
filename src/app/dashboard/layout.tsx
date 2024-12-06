@@ -17,7 +17,7 @@ export default function DashboardLayout({
   return loading ? (
     <Loader />
   ) : (
-    <div className="w-full flex h-screen overflow-hidden bg-slate-200 dark:bg-custom-black ">
+    <div className="w-full flex min-h-[100dvh] overflow-hidden bg-slate-200 dark:bg-custom-black ">
       <aside>
         <SideNav isAdmin={data && data?.role === "admin"} />
       </aside>
