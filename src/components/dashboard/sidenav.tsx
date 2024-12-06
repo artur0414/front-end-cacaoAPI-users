@@ -22,7 +22,7 @@ export default function SideNav({ isAdmin }: Partial<DashboardProps>) {
         "w-16 transition-all duration-200": !display,
       })}
     >
-      <div className="flex h-full flex-col px-3 py-4 md:px-2">
+      <div className="flex min-h-[100dvh] flex-col px-3 py-4 md:px-2">
         <div onClick={handleDisplay} className="flex py-4 md:px-1">
           <Logo display={display} />
         </div>
