@@ -12,7 +12,7 @@ export const useCode = () => {
         setError(null);
     
         try {
-        const response = await fetch("https://backend-users-8r0y.onrender.com/recover", {
+        const response = await fetch("https://users.cacaoapi.online/recover", {
             method: "POST",
             credentials: "include",
             mode: "cors",

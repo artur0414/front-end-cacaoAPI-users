@@ -17,7 +17,7 @@ export const useGetUsers = () => {
     const getUsers = async () => {
         try {
             setLoading(true);
-            const response = await fetch("https://backend-users-8r0y.onrender.com/getAll", {
+            const response = await fetch("https://users.cacaoapi.online/getAll", {
                 method: "GET",
                 credentials: "include",
                 mode: "cors",

@@ -14,7 +14,7 @@ const useAuth = () => {
     const verify = async () => {
       try {
         const response = await fetch(
-          "https://backend-users-8r0y.onrender.com/protected",
+          "https://users.cacaoapi.online/protected",
           {
             method: "GET",
             credentials: "include",

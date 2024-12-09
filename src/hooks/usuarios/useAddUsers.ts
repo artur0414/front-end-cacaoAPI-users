@@ -10,7 +10,7 @@ export const useAddUsers = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch("https://backend-users-8r0y.onrender.com/register", {
+            const response = await fetch("https://users.cacaoapi.online/register", {
                 method: "POST",
                 credentials: "include",
                 mode: "cors",

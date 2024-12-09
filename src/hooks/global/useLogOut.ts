@@ -4,7 +4,7 @@ export function useLogOut()  {
     const logOut = async (): Promise<boolean>  => {
         try {
             const result = await fetch(
-                "https://backend-users-8r0y.onrender.com/logout",
+                "https://users.cacaoapi.online/logout",
                 {
                   method: "POST",
                   credentials: "include",

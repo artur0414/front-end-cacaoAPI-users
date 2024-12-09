@@ -10,7 +10,7 @@ export const useRestore = () => {
         setLoading(true);
         setError(null); 
         try {
-            const response = await fetch("https://backend-users-8r0y.onrender.com/update", {
+            const response = await fetch("https://users.cacaoapi.online/update", {
                 method: "PATCH",
                 credentials: "include",
                 mode: "cors",

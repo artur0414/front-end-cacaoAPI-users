@@ -10,7 +10,7 @@ export const useUpdate = () => {
     const update = async (data: UsersProps) => {
         try {
             setLoading(true);
-            const response =  await fetch ('https://backend-users-8r0y.onrender.com/update-password', {
+            const response =  await fetch ('https://users.cacaoapi.online/update-password', {
                 method: 'PATCH',
                 credentials: 'include',
                 mode: 'cors',
